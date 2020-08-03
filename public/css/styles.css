@@ -1,0 +1,114 @@
+body {
+  background-image: url("https://w.wallhaven.cc/full/yj/wallhaven-yjvgxx.jpg");
+}
+
+i {
+  color: #a8d8ea;
+  font-size: 1.5em;
+}
+
+h1 {
+  color: #a8d8ea;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #a8d8ea;
+}
+
+input[type="checkbox"] {
+  margin: 1px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #a8d8ea;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navbar-brand:hover {
+  color: #a8d8ea;
+}
+
+/* The side navigation menu */
+.sidebar {
+  color: black;
+  background-color: #f9f7f7;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  color: #a8d8ea;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  color: #a8d8ea;
+}
+
+.sidebar-element {
+  text-align: left;
+}
+
+.border-right {
+  border-right-style: solid;
+}
+
+.body-box {
+  background-color: #f9f7f7;
+  margin-top: 50px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.container-form {
+  margin-top: 30px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-blocks:hover {
+  color: #a8d8ea;
+}

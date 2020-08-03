@@ -1,0 +1,64 @@
+<%- include("partials/header") -%>
+<!-- Sidebar -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="sidebar border-right">
+        <div class="row">
+          <div class="col-lg-12 col-sm-3">
+            <a href="/"> <i class="fas fa-check-square "></i>
+              <div class="sidebar-element">Daily</div>
+            </a>
+          </div>
+          <div class="col-lg-12 col-sm-3">
+            <a href="/home"><i class="fas fa-home "></i>
+              <div class="sidebar-element">Home</div>
+            </a>
+          </div>
+          <div class="col-lg-12 col-sm-3">
+            <a href="/work"><i class="fas fa-campground "></i>
+              <div class="sidebar-element">Work</div>
+            </a>
+          </div>
+          <div class="col-lg-12 col-sm-3">
+            <a href="/secret"><i class="fas fa-ghost "></i>
+              <div class="sidebar-element">Secret</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="col-lg-10">
+      <div class="content">
+        <h1><%= listName %></h1>
+        <form class="" action="/pages-delete" method="post">
+          <input type="hidden" name="pageUrl" value=<%=pageUrl%>>
+          <%  pagesList.forEach(function(element){ %>
+          <div class="item">
+            <input name="checkbox" type="checkbox" value=<%= element.id %> onChange="this.form.submit()">
+            <p> <%= element.name %> </p>
+          </div>
+          <%  }) %>
+        </form>
+        <div class="container container-form">
+          <form class="" action="<%=pageUrl %>" method="post">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-info" type="submit">Add Task</button>
+              </div>
+              <input type="text" name="newItem" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1" autocomplete="off">
+            </div>
+          </form>
+          <form class="" action="/pages-delete-selections" method="post">
+            <div class="buttons">
+              <button class="btn btn-info  btn-block" type="submit" value=<%=pageUrl %> name="removeButton">Remove Task</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%- include("partials/footer") -%>
